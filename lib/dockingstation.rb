@@ -1,3 +1,5 @@
+#require "bike"
+
 class DockingStation
 
   def release_bike
@@ -5,5 +7,4 @@ class DockingStation
     Bike.new
 
   end
-
 end

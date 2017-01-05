@@ -10,9 +10,11 @@ class DockingStation
 
   end
   def release_bike
-
-    Bike.new
-
+    if bikes.empty?
+     raise "no bikes available"
+   else
+    @bikes
+  end
   end
 
   def dock_bike(x)

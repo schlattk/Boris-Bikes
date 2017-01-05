@@ -12,6 +12,8 @@ it {is_expected.to respond_to(:dock_bike).with(1).argument }
 #  expect(subject.dock_bike("x")). to include("x")
 #end
 it {is_expected.to respond_to :show_bikes}
-
+it "should raise an error if dockingstation is empty" do
+expect {subject.release_bike}.to raise_error
+end
 
 end

@@ -2,17 +2,16 @@ require "dockingstation"
 describe DockingStation do
 it {is_expected.to respond_to :release_bike}
 it "returns an object of the class bike" do
-expect(subject.release_bike).to be_instance_of Bike
-expect(subject.release_bike.working?).to eq(true)
+  expect(subject.release_bike).to be_instance_of Bike
+  expect(subject.release_bike).to be_working
 end
-#it "accepts a new bike when dock method called" do
-#expect(subject.dock).to
+it {is_expected.to respond_to :dock_bike}
+it {is_expected.to respond_to(:dock_bike).with(1).argument }
+#it 'accepts a bike for docking' do
+
+#  expect(subject.dock_bike("x")). to include("x")
 #end
+it {is_expected.to respond_to :show_bikes}
+
+
 end
-
-
-
-#docking_station = DockingStation.new
-#describe docking_station.release_bike do
-#it {is_expected.to be_instance_of Bike}
-#end

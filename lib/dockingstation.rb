@@ -18,10 +18,13 @@ class DockingStation
   end
 
   def dock_bike(x)
+    if bikes.empty?
     if x.instance_of? Bike
       bikes.push(x)
     end
+  else raise "no more capacity"
   end
+end
 
   def show_bikes
     @bikes

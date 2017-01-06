@@ -13,12 +13,12 @@ class DockingStation
     if bikes.empty?
      raise "no bikes available"
    else
-    @bikes
+    @bikes.pop
   end
   end
 
   def dock_bike(x)
-    if bikes.empty?
+    if bikes.length < 20
     if x.instance_of? Bike
       bikes.push(x)
     end

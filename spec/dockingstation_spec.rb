@@ -16,7 +16,7 @@ it "should raise an error if dockingstation is empty" do
 expect {subject.release_bike}.to raise_error "no bikes available"
 end
 it "should raise an error if max cap has been reached" do
-expect { 21.times {subject.dock_bike Bike.new}}.to raise_error "no more capacity"
+expect {(DockingStation::DEFAULT_CAPACITY + 1).times {subject.dock_bike Bike.new}}.to raise_error "no more capacity"
 end
 
 end
